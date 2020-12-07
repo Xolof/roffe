@@ -11,7 +11,8 @@ class Layout extends React.Component {
     const blogPath = `${__PATH_PREFIX__}/`
     let header
 
-    if (location.pathname === rootPath || location.pathname === blogPath) {
+
+    if (location.pathname === blogPath) {
       header = (
         <h1
           style={{
@@ -26,7 +27,7 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={location.pathname === blogPath ? `/` : `/`}
+            to={`/`}
           >
             {title}
           </Link>
