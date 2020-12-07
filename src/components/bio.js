@@ -34,11 +34,10 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>, a framework built upon the
-              React library.
+              Skrivet av <strong>{author}</strong>.
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Follow me on Twitter
+              <a href={`https://m.facebook.com/${social.facebook}`}>
+                Följ mig på Facebook
               </a>
             </p>
           </Container>
@@ -50,7 +49,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
@@ -61,7 +60,7 @@ const bioQuery = graphql`
       siteMetadata {
         author
         social {
-          twitter
+          facebook
         }
       }
     }
